@@ -33,7 +33,7 @@ a:active { }
 
 body {
   background: #ff8500 url(/images/bg.gif) -40px top repeat-y;
-/*  font-family: "Gotham Rounded", "Helvetica Neue", Helvetica, Arial, sans-serif;*/
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 
@@ -44,6 +44,7 @@ body {
   margin-top: 100px;  
   float: left;
   padding: 20px;
+  font-size: 14px;
 }
 .test {
   float: left;
@@ -69,6 +70,9 @@ body {
 .lists a.active {
   font-weight: bold;
 }
+h1 {
+  margin-bottom: 20px;
+}
 
 
 /* The Form */
@@ -83,7 +87,7 @@ label {
   margin-left: 8px;
 }
 input[type="text"] {
-/*  font-family: "Gotham Rounded", "Helvetica Neue", Helvetica, Arial, sans-serif;*/
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 34px;
   padding: 12px;
   -webkit-border-radius: 8px;
