@@ -43580,3 +43580,193 @@ Processing TestController#list (for 127.0.0.1 at 2010-03-21 13:30:56) [POST]
 Rendering template within layouts/layout
 Rendering test/list
 Completed in 25ms (View: 5, DB: 9) | 200 OK [http://localhost/test/list/81]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing TestController#index (for 127.0.0.1 at 2010-03-21 14:07:57) [GET]
+  [4;35;1mList Load (0.3ms)[0m   [0mSELECT * FROM `lists` [0m
+Rendering template within layouts/layout
+Rendering test/index
+  [4;36;1mList Columns (1.8ms)[0m   [0;1mSHOW FIELDS FROM `lists`[0m
+Completed in 11ms (View: 4, DB: 2) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing TestController#list (for 127.0.0.1 at 2010-03-21 14:07:59) [GET]
+  Parameters: {"id"=>"81"}
+  [4;36;1mList Load (0.3ms)[0m   [0;1mSELECT * FROM `lists` [0m
+  [4;35;1mList Columns (2.2ms)[0m   [0mSHOW FIELDS FROM `lists`[0m
+  [4;36;1mList Load (0.6ms)[0m   [0;1mSELECT * FROM `lists` WHERE (`lists`.`id` = 81) [0m
+  [4;35;1mWord Load (3.1ms)[0m   [0mSELECT `words`.* FROM `words` INNER JOIN `lists_words` ON `lists_words`.word_id = `words`.id INNER JOIN `lists` ON `lists`.id = `lists_words`.list_id WHERE (list_id = 81) LIMIT 1[0m
+Rendering template within layouts/layout
+Rendering test/list
+  [4;36;1mWord Columns (1.6ms)[0m   [0;1mSHOW FIELDS FROM `words`[0m
+Completed in 24ms (View: 7, DB: 8) | 200 OK [http://localhost/test/list/81]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing TestController#list (for 127.0.0.1 at 2010-03-21 14:08:47) [GET]
+  Parameters: {"id"=>"81"}
+  [4;36;1mList Load (0.3ms)[0m   [0;1mSELECT * FROM `lists` [0m
+  [4;35;1mList Columns (2.4ms)[0m   [0mSHOW FIELDS FROM `lists`[0m
+  [4;36;1mList Load (0.7ms)[0m   [0;1mSELECT * FROM `lists` WHERE (`lists`.`id` = 81) [0m
+  [4;35;1mWord Load (3.1ms)[0m   [0mSELECT `words`.* FROM `words` INNER JOIN `lists_words` ON `lists_words`.word_id = `words`.id INNER JOIN `lists` ON `lists`.id = `lists_words`.list_id WHERE (list_id = 81) LIMIT 1[0m
+Rendering template within layouts/layout
+Rendering test/list
+  [4;36;1mWord Columns (2.1ms)[0m   [0;1mSHOW FIELDS FROM `words`[0m
+Completed in 25ms (View: 7, DB: 9) | 200 OK [http://localhost/test/list/81]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing TestController#list (for 127.0.0.1 at 2010-03-21 14:08:49) [POST]
+  Parameters: {"word_to_check"=>"2901", "authenticity_token"=>"kMN6CwxP8nSMm380UucLydRNJqcD1dTfMyt2ApbRZ0s=", "id"=>"81", "attempt"=>"marido"}
+  [4;36;1mList Load (5.3ms)[0m   [0;1mSELECT * FROM `lists` [0m
+  [4;35;1mList Columns (3.2ms)[0m   [0mSHOW FIELDS FROM `lists`[0m
+  [4;36;1mList Load (0.3ms)[0m   [0;1mSELECT * FROM `lists` WHERE (`lists`.`id` = 81) [0m
+  [4;35;1mWord Load (14.2ms)[0m   [0mSELECT `words`.* FROM `words` INNER JOIN `lists_words` ON `lists_words`.word_id = `words`.id INNER JOIN `lists` ON `lists`.id = `lists_words`.list_id WHERE (list_id = 81) LIMIT 1[0m
+  [4;36;1mWord Columns (2.4ms)[0m   [0;1mSHOW FIELDS FROM `words`[0m
+  [4;35;1mWord Load (2.9ms)[0m   [0mSELECT * FROM `words` WHERE (`words`.`id` = 2901) [0m
+Rendering template within layouts/layout
+Rendering test/list
+Completed in 70ms (View: 10, DB: 28) | 200 OK [http://localhost/test/list/81]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing TestController#list (for 127.0.0.1 at 2010-03-21 14:08:53) [POST]
+  Parameters: {"word_to_check"=>"2901", "authenticity_token"=>"kMN6CwxP8nSMm380UucLydRNJqcD1dTfMyt2ApbRZ0s=", "id"=>"81", "attempt"=>"marido"}
+  [4;35;1mList Load (0.3ms)[0m   [0mSELECT * FROM `lists` [0m
+  [4;36;1mList Columns (306.3ms)[0m   [0;1mSHOW FIELDS FROM `lists`[0m
+  [4;35;1mList Load (9.0ms)[0m   [0mSELECT * FROM `lists` WHERE (`lists`.`id` = 81) [0m
+  [4;36;1mWord Load (4.1ms)[0m   [0;1mSELECT `words`.* FROM `words` INNER JOIN `lists_words` ON `lists_words`.word_id = `words`.id INNER JOIN `lists` ON `lists`.id = `lists_words`.list_id WHERE (list_id = 81) LIMIT 1[0m
+  [4;35;1mWord Columns (8.4ms)[0m   [0mSHOW FIELDS FROM `words`[0m
+  [4;36;1mWord Load (3.5ms)[0m   [0;1mSELECT * FROM `words` WHERE (`words`.`id` = 2901) [0m
+Rendering template within layouts/layout
+Rendering test/list
+Completed in 352ms (View: 7, DB: 332) | 200 OK [http://localhost/test/list/81]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing TestController#list (for 127.0.0.1 at 2010-03-21 14:08:55) [POST]
+  Parameters: {"word_to_check"=>"2901", "authenticity_token"=>"kMN6CwxP8nSMm380UucLydRNJqcD1dTfMyt2ApbRZ0s=", "id"=>"81", "attempt"=>"marido"}
+  [4;36;1mList Load (0.3ms)[0m   [0;1mSELECT * FROM `lists` [0m
+  [4;35;1mList Columns (2.4ms)[0m   [0mSHOW FIELDS FROM `lists`[0m
+  [4;36;1mList Load (0.8ms)[0m   [0;1mSELECT * FROM `lists` WHERE (`lists`.`id` = 81) [0m
+  [4;35;1mWord Load (3.7ms)[0m   [0mSELECT `words`.* FROM `words` INNER JOIN `lists_words` ON `lists_words`.word_id = `words`.id INNER JOIN `lists` ON `lists`.id = `lists_words`.list_id WHERE (list_id = 81) LIMIT 1[0m
+  [4;36;1mWord Columns (1.6ms)[0m   [0;1mSHOW FIELDS FROM `words`[0m
+  [4;35;1mWord Load (0.7ms)[0m   [0mSELECT * FROM `words` WHERE (`words`.`id` = 2901) [0m
+Rendering template within layouts/layout
+Rendering test/list
+Completed in 26ms (View: 5, DB: 10) | 200 OK [http://localhost/test/list/81]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing TestController#list (for 127.0.0.1 at 2010-03-21 14:08:57) [POST]
+  Parameters: {"word_to_check"=>"2901", "authenticity_token"=>"kMN6CwxP8nSMm380UucLydRNJqcD1dTfMyt2ApbRZ0s=", "id"=>"81", "attempt"=>"marido"}
+  [4;35;1mList Load (0.3ms)[0m   [0mSELECT * FROM `lists` [0m
+  [4;36;1mList Columns (2.3ms)[0m   [0;1mSHOW FIELDS FROM `lists`[0m
+  [4;35;1mList Load (0.7ms)[0m   [0mSELECT * FROM `lists` WHERE (`lists`.`id` = 81) [0m
+  [4;36;1mWord Load (3.0ms)[0m   [0;1mSELECT `words`.* FROM `words` INNER JOIN `lists_words` ON `lists_words`.word_id = `words`.id INNER JOIN `lists` ON `lists`.id = `lists_words`.list_id WHERE (list_id = 81) LIMIT 1[0m
+  [4;35;1mWord Columns (2.4ms)[0m   [0mSHOW FIELDS FROM `words`[0m
+  [4;36;1mWord Load (0.6ms)[0m   [0;1mSELECT * FROM `words` WHERE (`words`.`id` = 2901) [0m
+Rendering template within layouts/layout
+Rendering test/list
+Completed in 25ms (View: 5, DB: 9) | 200 OK [http://localhost/test/list/81]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing TestController#list (for 127.0.0.1 at 2010-03-21 14:09:06) [POST]
+  Parameters: {"word_to_check"=>"2901", "authenticity_token"=>"kMN6CwxP8nSMm380UucLydRNJqcD1dTfMyt2ApbRZ0s=", "id"=>"81", "attempt"=>"marido"}
+  [4;36;1mList Load (0.3ms)[0m   [0;1mSELECT * FROM `lists` [0m
+  [4;35;1mList Columns (1.8ms)[0m   [0mSHOW FIELDS FROM `lists`[0m
+  [4;36;1mList Load (0.9ms)[0m   [0;1mSELECT * FROM `lists` WHERE (`lists`.`id` = 81) [0m
+  [4;35;1mWord Load (3.0ms)[0m   [0mSELECT `words`.* FROM `words` INNER JOIN `lists_words` ON `lists_words`.word_id = `words`.id INNER JOIN `lists` ON `lists`.id = `lists_words`.list_id WHERE (list_id = 81) LIMIT 1[0m
+  [4;36;1mWord Columns (1.8ms)[0m   [0;1mSHOW FIELDS FROM `words`[0m
+  [4;35;1mWord Load (0.6ms)[0m   [0mSELECT * FROM `words` WHERE (`words`.`id` = 2901) [0m
+Rendering template within layouts/layout
+Rendering test/list
+
+ActionView::TemplateError (undefined method `definition' for #<Array:0x238b95c>) on line #18 of app/views/test/list.html.erb:
+15:   <p><%= @list.description %></p> -->
+16: 
+17:   <% form_tag "/test/list/#{@list.id}" do %>
+18:     <%= label_tag @new_word.definition %><br />
+19:     <%= hidden_field_tag 'word_to_check', @new_word.id  %>  
+20:     <%= text_field_tag(
+21:       'attempt', 
+
+    app/views/test/list.html.erb:18
+    app/views/test/list.html.erb:17
+
+Rendered rescues/_trace (49.5ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing TestController#list (for 127.0.0.1 at 2010-03-21 14:09:16) [POST]
+  Parameters: {"word_to_check"=>"2901", "authenticity_token"=>"kMN6CwxP8nSMm380UucLydRNJqcD1dTfMyt2ApbRZ0s=", "id"=>"81", "attempt"=>"marido"}
+  [4;35;1mList Load (0.4ms)[0m   [0mSELECT * FROM `lists` [0m
+  [4;36;1mList Columns (2.4ms)[0m   [0;1mSHOW FIELDS FROM `lists`[0m
+  [4;35;1mList Load (0.4ms)[0m   [0mSELECT * FROM `lists` WHERE (`lists`.`id` = 81) [0m
+  [4;36;1mWord Load (3.5ms)[0m   [0;1mSELECT `words`.* FROM `words` INNER JOIN `lists_words` ON `lists_words`.word_id = `words`.id INNER JOIN `lists` ON `lists`.id = `lists_words`.list_id WHERE (list_id = 81) [0m
+  [4;35;1mWord Columns (1.4ms)[0m   [0mSHOW FIELDS FROM `words`[0m
+  [4;36;1mWord Load (0.2ms)[0m   [0;1mSELECT * FROM `words` WHERE (`words`.`id` = 2901) [0m
+Rendering template within layouts/layout
+Rendering test/list
+Completed in 25ms (View: 5, DB: 8) | 200 OK [http://localhost/test/list/81]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing TestController#list (for 127.0.0.1 at 2010-03-21 14:09:20) [POST]
+  Parameters: {"word_to_check"=>"2903", "authenticity_token"=>"kMN6CwxP8nSMm380UucLydRNJqcD1dTfMyt2ApbRZ0s=", "id"=>"81", "attempt"=>"hija"}
+  [4;36;1mList Load (0.4ms)[0m   [0;1mSELECT * FROM `lists` [0m
+  [4;35;1mList Columns (2.2ms)[0m   [0mSHOW FIELDS FROM `lists`[0m
+  [4;36;1mList Load (0.7ms)[0m   [0;1mSELECT * FROM `lists` WHERE (`lists`.`id` = 81) [0m
+  [4;35;1mWord Load (3.3ms)[0m   [0mSELECT `words`.* FROM `words` INNER JOIN `lists_words` ON `lists_words`.word_id = `words`.id INNER JOIN `lists` ON `lists`.id = `lists_words`.list_id WHERE (list_id = 81) [0m
+  [4;36;1mWord Columns (1.8ms)[0m   [0;1mSHOW FIELDS FROM `words`[0m
+  [4;35;1mWord Load (0.2ms)[0m   [0mSELECT * FROM `words` WHERE (`words`.`id` = 2903) [0m
+Rendering template within layouts/layout
+Rendering test/list
+Completed in 108ms (View: 5, DB: 9) | 200 OK [http://localhost/test/list/81]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing TestController#list (for 127.0.0.1 at 2010-03-21 14:09:26) [POST]
+  Parameters: {"word_to_check"=>"2910", "authenticity_token"=>"kMN6CwxP8nSMm380UucLydRNJqcD1dTfMyt2ApbRZ0s=", "id"=>"81", "attempt"=>"compañero"}
+  [4;35;1mList Load (0.4ms)[0m   [0mSELECT * FROM `lists` [0m
+  [4;36;1mList Columns (2.3ms)[0m   [0;1mSHOW FIELDS FROM `lists`[0m
+  [4;35;1mList Load (0.7ms)[0m   [0mSELECT * FROM `lists` WHERE (`lists`.`id` = 81) [0m
+  [4;36;1mWord Load (3.4ms)[0m   [0;1mSELECT `words`.* FROM `words` INNER JOIN `lists_words` ON `lists_words`.word_id = `words`.id INNER JOIN `lists` ON `lists`.id = `lists_words`.list_id WHERE (list_id = 81) [0m
+  [4;35;1mWord Columns (1.5ms)[0m   [0mSHOW FIELDS FROM `words`[0m
+  [4;36;1mWord Load (0.6ms)[0m   [0;1mSELECT * FROM `words` WHERE (`words`.`id` = 2910) [0m
+Rendering template within layouts/layout
+Rendering test/list
+Completed in 26ms (View: 5, DB: 9) | 200 OK [http://localhost/test/list/81]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing TestController#list (for 127.0.0.1 at 2010-03-21 14:09:33) [POST]
+  Parameters: {"word_to_check"=>"2910", "authenticity_token"=>"kMN6CwxP8nSMm380UucLydRNJqcD1dTfMyt2ApbRZ0s=", "id"=>"81", "attempt"=>"compañera"}
+  [4;36;1mList Load (0.3ms)[0m   [0;1mSELECT * FROM `lists` [0m
+  [4;35;1mList Columns (2.2ms)[0m   [0mSHOW FIELDS FROM `lists`[0m
+  [4;36;1mList Load (0.5ms)[0m   [0;1mSELECT * FROM `lists` WHERE (`lists`.`id` = 81) [0m
+  [4;35;1mWord Load (3.4ms)[0m   [0mSELECT `words`.* FROM `words` INNER JOIN `lists_words` ON `lists_words`.word_id = `words`.id INNER JOIN `lists` ON `lists`.id = `lists_words`.list_id WHERE (list_id = 81) [0m
+  [4;36;1mWord Columns (1.8ms)[0m   [0;1mSHOW FIELDS FROM `words`[0m
+  [4;35;1mWord Load (0.7ms)[0m   [0mSELECT * FROM `words` WHERE (`words`.`id` = 2910) [0m
+Rendering template within layouts/layout
+Rendering test/list
+Completed in 26ms (View: 5, DB: 9) | 200 OK [http://localhost/test/list/81]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing TestController#list (for 127.0.0.1 at 2010-03-21 14:09:36) [POST]
+  Parameters: {"word_to_check"=>"2905", "authenticity_token"=>"kMN6CwxP8nSMm380UucLydRNJqcD1dTfMyt2ApbRZ0s=", "id"=>"81", "attempt"=>"novia"}
+  [4;35;1mList Load (0.4ms)[0m   [0mSELECT * FROM `lists` [0m
+  [4;36;1mList Columns (4.8ms)[0m   [0;1mSHOW FIELDS FROM `lists`[0m
+  [4;35;1mList Load (3.0ms)[0m   [0mSELECT * FROM `lists` WHERE (`lists`.`id` = 81) [0m
+  [4;36;1mWord Load (3.3ms)[0m   [0;1mSELECT `words`.* FROM `words` INNER JOIN `lists_words` ON `lists_words`.word_id = `words`.id INNER JOIN `lists` ON `lists`.id = `lists_words`.list_id WHERE (list_id = 81) [0m
+  [4;35;1mWord Columns (1.7ms)[0m   [0mSHOW FIELDS FROM `words`[0m
+  [4;36;1mWord Load (0.7ms)[0m   [0;1mSELECT * FROM `words` WHERE (`words`.`id` = 2905) [0m
+Rendering template within layouts/layout
+Rendering test/list
+Completed in 32ms (View: 5, DB: 14) | 200 OK [http://localhost/test/list/81]
