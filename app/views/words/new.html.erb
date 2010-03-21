@@ -1,0 +1,32 @@
+<h1>New word</h1>
+
+<% form_for(@word) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :word %><br />
+    <%= f.text_field :word %>
+  </p>
+  <p>
+    <%= f.label :definition %><br />
+    <%= f.text_field :definition %>
+  </p>
+  <p>
+    <label for="word[list_ids][]">Lists</label><br />
+    <%= select_tag(
+      'word[list_ids][]',
+      options_from_collection_for_select(
+        List.find(:all, :order => 'name'),
+        'id', 
+        'name', 
+        @word.lists.collect {|l| l.id}
+      ),
+      :multiple => true
+    ) %>
+  </p>
+  <p>
+    <%= f.submit "Create" %>
+  </p>
+<% end %>
+
+<%= link_to 'Back', words_path %>

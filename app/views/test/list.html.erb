@@ -1,0 +1,39 @@
+<div class="lists">
+  <ul>
+    <% @lists.each do |list| %>
+      <li><%= link_to(
+        list.name, 
+        url_for(:action => "list", :id => list.id),
+        :class => list == @list ? "active" : nil
+      ) %></li>
+    <% end %>
+  </ul>
+</div>
+
+<div class="test">
+  <!-- <h1><%= @list.name %></h1>
+  <p><%= @list.description %></p> -->
+
+  <% form_tag "/test/list/#{@list.id}" do %>
+    <%= label_tag @new_word.definition %><br />
+    <%= hidden_field_tag 'word_to_check', @new_word.id  %>  
+    <%= text_field_tag(
+      'attempt', 
+      nil, 
+      {
+        :autocomplete => 'off', 
+        :autofocus => 'true', 
+        :placeholder => 'Answer',
+        :size => 14
+      }
+    ) %>
+  <% end %>
+  
+  <% unless @message.blank? %>
+    <div class="message">
+      <%= h @message %>
+    </div>
+  <% end %>
+  
+  
+</div>

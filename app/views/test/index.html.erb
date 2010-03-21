@@ -1,0 +1,16 @@
+<div class="lists">
+  <ul>
+    <% @lists.each do |list| %>
+      <li><%= link_to(list.name, :action => "list", :id => list.id) %></li>
+    <% end %>
+  </ul>
+</div>
+
+
+<div class="test">
+  <h1>Vocabulate</h1>
+  <p>
+    Test yourself on verbs and adjectives - select a list from the left,
+    or go TOTALLY RANDOM.
+  </p>
+</div>

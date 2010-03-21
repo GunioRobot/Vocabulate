@@ -1,0 +1,95 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, img, ins, kbd, q, s, samp,
+small, strike, sub, sup, tt, var,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;
+	font-weight: inherit;
+	font-style: inherit;
+	font-family: inherit;
+	vertical-align: baseline;
+}
+
+/* For IE */
+img { -ms-interpolation-mode:bicubic; } 
+
+a img {
+  border: none;
+}
+
+a, a:link { text-decoration: none; color: #fb0219;}
+a:visited { }
+a:hover { }
+a:active { }
+
+
+
+
+body {
+  background: #ff8500 url(/images/bg.gif) top left repeat-y;
+  font-family: "Gotham Rounded", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+
+/* Layout */
+
+.lists {
+  width: 200px;
+  margin-top: 100px;  
+  float: left;
+  padding: 20px;
+}
+.test {
+  float: left;
+  padding-top: 115px;
+  margin-left: 40px;
+  width: 600px;
+}
+.message {
+  margin-top: 40px;
+  padding-left: 10px;
+}
+
+/* Type */
+
+.lists ul {
+  list-style: none;
+  line-height: 140%;
+}
+.lists a {
+  color: #fff;
+}
+.lists a.active {
+  font-weight: bold;
+}
+
+
+/* The Form */
+
+form {
+/*  text-align: center;*/
+}
+label {
+  color: #fff;
+  text-align: left;
+  font-size: 34px;
+  margin-left: 8px;
+}
+input[type="text"] {
+  font-family: "Gotham Rounded", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 34px;
+  padding: 12px;
+  -webkit-border-radius: 8px;
+  background: #fff;
+  border: none;
+}
+
+input[type="text"]:focus {
+  outline: none;
+}
