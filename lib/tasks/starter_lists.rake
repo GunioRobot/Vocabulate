@@ -423,7 +423,13 @@ namespace :lists do
       "esposa" => "wife",
       "novio" => "boyfriend",
       "novia" => "girlfriend",
-      "compañera" => "girlfriend (lesbian)"
+      "compañera" => "girlfriend (lesbian)",
+      "abuelo" => "grandfather",
+      "abuela" => "grandmother",
+      "primo" => "male cousin",
+      "prima" => "female cousin",
+      "nombre" => "name",
+      "apellido" => "surname"
     }
     
     words_for_list.each do |k,v|
@@ -502,8 +508,31 @@ namespace :lists do
         :definition => v
       )
       word.lists << list
-    end    
+    end
     
+    #New list
+    
+    list = List.create(
+      :name => "Days of the Week"
+    )
+    
+    words_for_list = {
+      "lunes" => "Monday",
+      "martes" => "Tuesday",
+      "miércoles" => "Wednesday",
+      "jueves" => "Thursday",
+      "viernes" => "Friday",
+      "sábado" => "Saturday",
+      "domingo" => "Sunday"
+    }
+    
+    words_for_list.each do |k,v|
+      word = Word.create(
+        :word => k,
+        :definition => v
+      )
+      word.lists << list
+    end
 
   end
 end
