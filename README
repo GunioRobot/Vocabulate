@@ -1,3 +1,7 @@
 ==Vocabulate
 
 I'm learning Spanish, and needed a way to test myself on specific sets of vocab for my classes each week. All the examples I could find around the place were covered with nasty blinking ads, so I thought I'd give it a shot. It's the first time I've taken a Rails app from conception to (initial) deployment without asking anybody for help, and I'm going to use it as a way of learning more about Rails, git, Ruby, Github and Heroku (alongside Spanish).
+
+==Set up Vocabulate
+
+Check out run rake db:migrate followed by rake lists:lists_create
