@@ -16,10 +16,11 @@ class TestController < ApplicationController
     @list = List.find(params[:id])
     
     @new_word = Word.find(
-      :first, 
+      :first,
       :joins => :lists,
       :conditions => ["list_id = ?", @list.id],
-      :order => "RAND()"
+      :order => 'rand()',
+      :limit => 1
     )
 
     if params[:word_to_check]

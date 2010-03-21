@@ -43273,3 +43273,254 @@ Processing TestController#list (for 127.0.0.1 at 2010-03-21 13:12:19) [POST]
 Rendering template within layouts/layout
 Rendering test/list
 Completed in 34ms (View: 8, DB: 11) | 200 OK [http://localhost/test/list/80]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing TestController#index (for 127.0.0.1 at 2010-03-21 13:18:33) [GET]
+  [4;36;1mList Load (0.4ms)[0m   [0;1mSELECT * FROM `lists` [0m
+Rendering template within layouts/layout
+Rendering test/index
+  [4;35;1mList Columns (2.3ms)[0m   [0mSHOW FIELDS FROM `lists`[0m
+Completed in 81ms (View: 4, DB: 3) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing TestController#list (for 127.0.0.1 at 2010-03-21 13:18:35) [GET]
+  Parameters: {"id"=>"81"}
+  [4;35;1mList Load (0.3ms)[0m   [0mSELECT * FROM `lists` [0m
+  [4;36;1mList Columns (2.2ms)[0m   [0;1mSHOW FIELDS FROM `lists`[0m
+  [4;35;1mList Load (0.6ms)[0m   [0mSELECT * FROM `lists` WHERE (`lists`.`id` = 81) [0m
+  [4;36;1mWord Load (3.5ms)[0m   [0;1mSELECT `words`.* FROM `words` INNER JOIN `lists_words` ON `lists_words`.word_id = `words`.id INNER JOIN `lists` ON `lists`.id = `lists_words`.list_id WHERE (list_id = 81) ORDER BY RAND() LIMIT 1[0m
+Rendering template within layouts/layout
+Rendering test/list
+  [4;35;1mWord Columns (1.6ms)[0m   [0mSHOW FIELDS FROM `words`[0m
+Completed in 25ms (View: 7, DB: 8) | 200 OK [http://localhost/test/list/81]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing TestController#list (for 127.0.0.1 at 2010-03-21 13:18:37) [GET]
+  Parameters: {"id"=>"82"}
+  [4;35;1mList Load (0.3ms)[0m   [0mSELECT * FROM `lists` [0m
+  [4;36;1mList Columns (1.7ms)[0m   [0;1mSHOW FIELDS FROM `lists`[0m
+  [4;35;1mList Load (0.6ms)[0m   [0mSELECT * FROM `lists` WHERE (`lists`.`id` = 82) [0m
+  [4;36;1mWord Load (3.6ms)[0m   [0;1mSELECT `words`.* FROM `words` INNER JOIN `lists_words` ON `lists_words`.word_id = `words`.id INNER JOIN `lists` ON `lists`.id = `lists_words`.list_id WHERE (list_id = 82) ORDER BY RAND() LIMIT 1[0m
+Rendering template within layouts/layout
+Rendering test/list
+  [4;35;1mWord Columns (1.6ms)[0m   [0mSHOW FIELDS FROM `words`[0m
+Completed in 25ms (View: 7, DB: 8) | 200 OK [http://localhost/test/list/82]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing TestController#list (for 127.0.0.1 at 2010-03-21 13:18:42) [POST]
+  Parameters: {"word_to_check"=>"2944", "authenticity_token"=>"kMN6CwxP8nSMm380UucLydRNJqcD1dTfMyt2ApbRZ0s=", "id"=>"82", "attempt"=>"doscientos"}
+  [4;35;1mList Load (0.3ms)[0m   [0mSELECT * FROM `lists` [0m
+  [4;36;1mList Columns (2.2ms)[0m   [0;1mSHOW FIELDS FROM `lists`[0m
+  [4;35;1mList Load (0.7ms)[0m   [0mSELECT * FROM `lists` WHERE (`lists`.`id` = 82) [0m
+  [4;36;1mWord Load (4.5ms)[0m   [0;1mSELECT `words`.* FROM `words` INNER JOIN `lists_words` ON `lists_words`.word_id = `words`.id INNER JOIN `lists` ON `lists`.id = `lists_words`.list_id WHERE (list_id = 82) ORDER BY RAND() LIMIT 1[0m
+  [4;35;1mWord Columns (1.5ms)[0m   [0mSHOW FIELDS FROM `words`[0m
+  [4;36;1mWord Load (0.6ms)[0m   [0;1mSELECT * FROM `words` WHERE (`words`.`id` = 2944) [0m
+Rendering template within layouts/layout
+Rendering test/list
+Completed in 26ms (View: 5, DB: 10) | 200 OK [http://localhost/test/list/82]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing TestController#list (for 127.0.0.1 at 2010-03-21 13:25:26) [POST]
+  Parameters: {"word_to_check"=>"2944", "authenticity_token"=>"kMN6CwxP8nSMm380UucLydRNJqcD1dTfMyt2ApbRZ0s=", "id"=>"82", "attempt"=>"doscientos"}
+  [4;36;1mList Load (0.4ms)[0m   [0;1mSELECT * FROM `lists` [0m
+  [4;35;1mList Columns (2.3ms)[0m   [0mSHOW FIELDS FROM `lists`[0m
+  [4;36;1mList Load (0.7ms)[0m   [0;1mSELECT * FROM `lists` WHERE (`lists`.`id` = 82) [0m
+  [4;35;1mWord Load (3.9ms)[0m   [0mSELECT `words`.* FROM `words` INNER JOIN `lists_words` ON `lists_words`.word_id = `words`.id INNER JOIN `lists` ON `lists`.id = `lists_words`.list_id WHERE (list_id = 82) ORDER BY RAND() LIMIT 1[0m
+  [4;36;1mWord Columns (1.5ms)[0m   [0;1mSHOW FIELDS FROM `words`[0m
+  [4;35;1mWord Load (0.6ms)[0m   [0mSELECT * FROM `words` WHERE (`words`.`id` = 2944) [0m
+Rendering template within layouts/layout
+Rendering test/list
+
+ActionView::TemplateError (undefined method `definition' for #<Array:0x233fbb0>) on line #18 of app/views/test/list.html.erb:
+15:   <p><%= @list.description %></p> -->
+16: 
+17:   <% form_tag "/test/list/#{@list.id}" do %>
+18:     <%= label_tag @new_word.definition %><br />
+19:     <%= hidden_field_tag 'word_to_check', @new_word.id  %>  
+20:     <%= text_field_tag(
+21:       'attempt', 
+
+    app/views/test/list.html.erb:18
+    app/views/test/list.html.erb:17
+
+Rendered rescues/_trace (54.6ms)
+Rendered rescues/_request_and_response (1.9ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing TestController#list (for 127.0.0.1 at 2010-03-21 13:26:44) [POST]
+  Parameters: {"word_to_check"=>"2944", "authenticity_token"=>"kMN6CwxP8nSMm380UucLydRNJqcD1dTfMyt2ApbRZ0s=", "id"=>"82", "attempt"=>"doscientos"}
+  [4;35;1mList Load (0.3ms)[0m   [0mSELECT * FROM `lists` [0m
+  [4;36;1mList Columns (2.2ms)[0m   [0;1mSHOW FIELDS FROM `lists`[0m
+  [4;35;1mList Load (0.6ms)[0m   [0mSELECT * FROM `lists` WHERE (`lists`.`id` = 82) [0m
+  [4;36;1mWord Load (5.1ms)[0m   [0;1mSELECT `words`.* FROM `words` INNER JOIN `lists_words` ON `lists_words`.word_id = `words`.id INNER JOIN `lists` ON `lists`.id = `lists_words`.list_id WHERE (list_id = 82) ORDER BY RAND() LIMIT 1[0m
+  [4;35;1mWord Columns (1.4ms)[0m   [0mSHOW FIELDS FROM `words`[0m
+  [4;36;1mWord Load (1.2ms)[0m   [0;1mSELECT * FROM `words` WHERE (`words`.`id` = 2944) [0m
+Rendering template within layouts/layout
+Rendering test/list
+
+ActionView::TemplateError (undefined method `definition' for #<Array:0x216eb24>) on line #19 of app/views/test/list.html.erb:
+16:   
+17:   <% if @new_word %>
+18:     <% form_tag "/test/list/#{@list.id}" do %>
+19:       <%= label_tag @new_word.definition %><br />
+20:       <%= hidden_field_tag 'word_to_check', @new_word.id  %>  
+21:       <%= text_field_tag(
+22:         'attempt', 
+
+    app/views/test/list.html.erb:19
+    app/views/test/list.html.erb:18
+
+Rendered rescues/_trace (49.5ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing TestController#list (for 127.0.0.1 at 2010-03-21 13:27:15) [POST]
+  Parameters: {"word_to_check"=>"2944", "authenticity_token"=>"kMN6CwxP8nSMm380UucLydRNJqcD1dTfMyt2ApbRZ0s=", "id"=>"82", "attempt"=>"doscientos"}
+  [4;36;1mList Load (0.3ms)[0m   [0;1mSELECT * FROM `lists` [0m
+  [4;35;1mList Columns (2.2ms)[0m   [0mSHOW FIELDS FROM `lists`[0m
+  [4;36;1mList Load (0.5ms)[0m   [0;1mSELECT * FROM `lists` WHERE (`lists`.`id` = 82) [0m
+
+ActiveRecord::RecordNotFound (Couldn't find Word without an ID):
+  app/controllers/test_controller.rb:18:in `list'
+
+Rendered rescues/_trace (37.7ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing TestController#list (for 127.0.0.1 at 2010-03-21 13:27:24) [POST]
+  Parameters: {"word_to_check"=>"2944", "authenticity_token"=>"kMN6CwxP8nSMm380UucLydRNJqcD1dTfMyt2ApbRZ0s=", "id"=>"82", "attempt"=>"doscientos"}
+  [4;36;1mList Load (0.4ms)[0m   [0;1mSELECT * FROM `lists` [0m
+  [4;35;1mList Columns (2.7ms)[0m   [0mSHOW FIELDS FROM `lists`[0m
+  [4;36;1mList Load (0.7ms)[0m   [0;1mSELECT * FROM `lists` WHERE (`lists`.`id` = 82) [0m
+  [4;35;1mWord Load (3.9ms)[0m   [0mSELECT `words`.* FROM `words` INNER JOIN `lists_words` ON `lists_words`.word_id = `words`.id INNER JOIN `lists` ON `lists`.id = `lists_words`.list_id WHERE (list_id = 82) ORDER BY RAND() LIMIT 1[0m
+  [4;36;1mWord Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `words`[0m
+  [4;35;1mWord Load (0.9ms)[0m   [0mSELECT * FROM `words` WHERE (`words`.`id` = 2944) [0m
+Rendering template within layouts/layout
+Rendering test/list
+Completed in 35ms (View: 11, DB: 11) | 200 OK [http://localhost/test/list/82]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing TestController#index (for 127.0.0.1 at 2010-03-21 13:27:30) [GET]
+  [4;35;1mList Load (0.4ms)[0m   [0mSELECT * FROM `lists` [0m
+Rendering template within layouts/layout
+Rendering test/index
+  [4;36;1mList Columns (2.2ms)[0m   [0;1mSHOW FIELDS FROM `lists`[0m
+Completed in 12ms (View: 4, DB: 3) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing TestController#list (for 127.0.0.1 at 2010-03-21 13:27:32) [GET]
+  Parameters: {"id"=>"81"}
+  [4;36;1mList Load (0.4ms)[0m   [0;1mSELECT * FROM `lists` [0m
+  [4;35;1mList Columns (2.4ms)[0m   [0mSHOW FIELDS FROM `lists`[0m
+  [4;36;1mList Load (0.7ms)[0m   [0;1mSELECT * FROM `lists` WHERE (`lists`.`id` = 81) [0m
+  [4;35;1mWord Load (4.4ms)[0m   [0mSELECT `words`.* FROM `words` INNER JOIN `lists_words` ON `lists_words`.word_id = `words`.id INNER JOIN `lists` ON `lists`.id = `lists_words`.list_id WHERE (list_id = 81) ORDER BY RAND() LIMIT 1[0m
+Rendering template within layouts/layout
+Rendering test/list
+  [4;36;1mWord Columns (1.6ms)[0m   [0;1mSHOW FIELDS FROM `words`[0m
+Completed in 28ms (View: 7, DB: 10) | 200 OK [http://localhost/test/list/81]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing TestController#list (for 127.0.0.1 at 2010-03-21 13:27:34) [POST]
+  Parameters: {"word_to_check"=>"2906", "authenticity_token"=>"kMN6CwxP8nSMm380UucLydRNJqcD1dTfMyt2ApbRZ0s=", "id"=>"81", "attempt"=>"hijo"}
+  [4;36;1mList Load (0.3ms)[0m   [0;1mSELECT * FROM `lists` [0m
+  [4;35;1mList Columns (2.2ms)[0m   [0mSHOW FIELDS FROM `lists`[0m
+  [4;36;1mList Load (0.6ms)[0m   [0;1mSELECT * FROM `lists` WHERE (`lists`.`id` = 81) [0m
+  [4;35;1mWord Load (3.9ms)[0m   [0mSELECT `words`.* FROM `words` INNER JOIN `lists_words` ON `lists_words`.word_id = `words`.id INNER JOIN `lists` ON `lists`.id = `lists_words`.list_id WHERE (list_id = 81) ORDER BY RAND() LIMIT 1[0m
+  [4;36;1mWord Columns (1.7ms)[0m   [0;1mSHOW FIELDS FROM `words`[0m
+  [4;35;1mWord Load (0.6ms)[0m   [0mSELECT * FROM `words` WHERE (`words`.`id` = 2906) [0m
+Rendering template within layouts/layout
+Rendering test/list
+Completed in 26ms (View: 5, DB: 9) | 200 OK [http://localhost/test/list/81]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing TestController#list (for 127.0.0.1 at 2010-03-21 13:27:40) [POST]
+  Parameters: {"word_to_check"=>"2901", "authenticity_token"=>"kMN6CwxP8nSMm380UucLydRNJqcD1dTfMyt2ApbRZ0s=", "id"=>"81", "attempt"=>"marido"}
+  [4;35;1mList Load (0.3ms)[0m   [0mSELECT * FROM `lists` [0m
+  [4;36;1mList Columns (2.2ms)[0m   [0;1mSHOW FIELDS FROM `lists`[0m
+  [4;35;1mList Load (0.7ms)[0m   [0mSELECT * FROM `lists` WHERE (`lists`.`id` = 81) [0m
+  [4;36;1mWord Load (3.4ms)[0m   [0;1mSELECT `words`.* FROM `words` INNER JOIN `lists_words` ON `lists_words`.word_id = `words`.id INNER JOIN `lists` ON `lists`.id = `lists_words`.list_id WHERE (list_id = 81) ORDER BY RAND() LIMIT 1[0m
+  [4;35;1mWord Columns (2.1ms)[0m   [0mSHOW FIELDS FROM `words`[0m
+  [4;36;1mWord Load (0.5ms)[0m   [0;1mSELECT * FROM `words` WHERE (`words`.`id` = 2901) [0m
+Rendering template within layouts/layout
+Rendering test/list
+Completed in 26ms (View: 5, DB: 9) | 200 OK [http://localhost/test/list/81]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing TestController#list (for 127.0.0.1 at 2010-03-21 13:27:54) [POST]
+  Parameters: {"word_to_check"=>"2901", "authenticity_token"=>"kMN6CwxP8nSMm380UucLydRNJqcD1dTfMyt2ApbRZ0s=", "id"=>"81", "attempt"=>"marido"}
+  [4;36;1mList Load (0.4ms)[0m   [0;1mSELECT * FROM `lists` [0m
+  [4;35;1mList Columns (1.9ms)[0m   [0mSHOW FIELDS FROM `lists`[0m
+  [4;36;1mList Load (0.8ms)[0m   [0;1mSELECT * FROM `lists` WHERE (`lists`.`id` = 81) [0m
+
+ArgumentError (Unknown key(s): order_by):
+  app/controllers/test_controller.rb:18:in `list'
+
+Rendered rescues/_trace (39.1ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing TestController#index (for 127.0.0.1 at 2010-03-21 13:28:48) [GET]
+  [4;36;1mList Load (0.4ms)[0m   [0;1mSELECT * FROM `lists` [0m
+Rendering template within layouts/layout
+Rendering test/index
+  [4;35;1mList Columns (1.8ms)[0m   [0mSHOW FIELDS FROM `lists`[0m
+Completed in 13ms (View: 4, DB: 2) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing TestController#list (for 127.0.0.1 at 2010-03-21 13:28:49) [GET]
+  Parameters: {"id"=>"81"}
+  [4;35;1mList Load (0.4ms)[0m   [0mSELECT * FROM `lists` [0m
+  [4;36;1mList Columns (2.2ms)[0m   [0;1mSHOW FIELDS FROM `lists`[0m
+  [4;35;1mList Load (1.0ms)[0m   [0mSELECT * FROM `lists` WHERE (`lists`.`id` = 81) [0m
+  [4;36;1mWord Load (3.8ms)[0m   [0;1mSELECT `words`.* FROM `words` INNER JOIN `lists_words` ON `lists_words`.word_id = `words`.id INNER JOIN `lists` ON `lists`.id = `lists_words`.list_id WHERE (list_id = 81) ORDER BY rand() LIMIT 1[0m
+Rendering template within layouts/layout
+Rendering test/list
+  [4;35;1mWord Columns (1.5ms)[0m   [0mSHOW FIELDS FROM `words`[0m
+Completed in 24ms (View: 6, DB: 9) | 200 OK [http://localhost/test/list/81]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing TestController#list (for 127.0.0.1 at 2010-03-21 13:28:52) [POST]
+  Parameters: {"word_to_check"=>"2909", "authenticity_token"=>"kMN6CwxP8nSMm380UucLydRNJqcD1dTfMyt2ApbRZ0s=", "id"=>"81", "attempt"=>"madre"}
+  [4;35;1mList Load (0.4ms)[0m   [0mSELECT * FROM `lists` [0m
+  [4;36;1mList Columns (2.2ms)[0m   [0;1mSHOW FIELDS FROM `lists`[0m
+  [4;35;1mList Load (0.7ms)[0m   [0mSELECT * FROM `lists` WHERE (`lists`.`id` = 81) [0m
+  [4;36;1mWord Load (3.9ms)[0m   [0;1mSELECT `words`.* FROM `words` INNER JOIN `lists_words` ON `lists_words`.word_id = `words`.id INNER JOIN `lists` ON `lists`.id = `lists_words`.list_id WHERE (list_id = 81) ORDER BY rand() LIMIT 1[0m
+  [4;35;1mWord Columns (1.6ms)[0m   [0mSHOW FIELDS FROM `words`[0m
+  [4;36;1mWord Load (0.7ms)[0m   [0;1mSELECT * FROM `words` WHERE (`words`.`id` = 2909) [0m
+Rendering template within layouts/layout
+Rendering test/list
+Completed in 108ms (View: 5, DB: 10) | 200 OK [http://localhost/test/list/81]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing TestController#list (for 127.0.0.1 at 2010-03-21 13:28:54) [POST]
+  Parameters: {"word_to_check"=>"2916", "authenticity_token"=>"kMN6CwxP8nSMm380UucLydRNJqcD1dTfMyt2ApbRZ0s=", "id"=>"81", "attempt"=>"padre"}
+  [4;36;1mList Load (0.4ms)[0m   [0;1mSELECT * FROM `lists` [0m
+  [4;35;1mList Columns (2.4ms)[0m   [0mSHOW FIELDS FROM `lists`[0m
+  [4;36;1mList Load (0.9ms)[0m   [0;1mSELECT * FROM `lists` WHERE (`lists`.`id` = 81) [0m
+  [4;35;1mWord Load (4.7ms)[0m   [0mSELECT `words`.* FROM `words` INNER JOIN `lists_words` ON `lists_words`.word_id = `words`.id INNER JOIN `lists` ON `lists`.id = `lists_words`.list_id WHERE (list_id = 81) ORDER BY rand() LIMIT 1[0m
+  [4;36;1mWord Columns (1.6ms)[0m   [0;1mSHOW FIELDS FROM `words`[0m
+  [4;35;1mWord Load (0.2ms)[0m   [0mSELECT * FROM `words` WHERE (`words`.`id` = 2916) [0m
+Rendering template within layouts/layout
+Rendering test/list
+Completed in 32ms (View: 7, DB: 10) | 200 OK [http://localhost/test/list/81]
