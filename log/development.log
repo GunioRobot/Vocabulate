@@ -43524,3 +43524,59 @@ Processing TestController#list (for 127.0.0.1 at 2010-03-21 13:28:54) [POST]
 Rendering template within layouts/layout
 Rendering test/list
 Completed in 32ms (View: 7, DB: 10) | 200 OK [http://localhost/test/list/81]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing TestController#list (for 127.0.0.1 at 2010-03-21 13:30:48) [POST]
+  Parameters: {"word_to_check"=>"2916", "authenticity_token"=>"kMN6CwxP8nSMm380UucLydRNJqcD1dTfMyt2ApbRZ0s=", "id"=>"81", "attempt"=>"padre"}
+  [4;35;1mList Load (0.4ms)[0m   [0mSELECT * FROM `lists` [0m
+  [4;36;1mList Columns (2.2ms)[0m   [0;1mSHOW FIELDS FROM `lists`[0m
+  [4;35;1mList Load (0.6ms)[0m   [0mSELECT * FROM `lists` WHERE (`lists`.`id` = 81) [0m
+  [4;36;1mWord Load (3.0ms)[0m   [0;1mSELECT `words`.* FROM `words` INNER JOIN `lists_words` ON `lists_words`.word_id = `words`.id INNER JOIN `lists` ON `lists`.id = `lists_words`.list_id WHERE (list_id = 81) LIMIT 1[0m
+  [4;35;1mWord Columns (3.3ms)[0m   [0mSHOW FIELDS FROM `words`[0m
+  [4;36;1mWord Load (0.3ms)[0m   [0;1mSELECT * FROM `words` WHERE (`words`.`id` = 2916) [0m
+Rendering template within layouts/layout
+Rendering test/list
+Completed in 27ms (View: 5, DB: 10) | 200 OK [http://localhost/test/list/81]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing TestController#list (for 127.0.0.1 at 2010-03-21 13:30:52) [POST]
+  Parameters: {"word_to_check"=>"2901", "authenticity_token"=>"kMN6CwxP8nSMm380UucLydRNJqcD1dTfMyt2ApbRZ0s=", "id"=>"81", "attempt"=>"marido"}
+  [4;36;1mList Load (0.3ms)[0m   [0;1mSELECT * FROM `lists` [0m
+  [4;35;1mList Columns (2.4ms)[0m   [0mSHOW FIELDS FROM `lists`[0m
+  [4;36;1mList Load (0.7ms)[0m   [0;1mSELECT * FROM `lists` WHERE (`lists`.`id` = 81) [0m
+  [4;35;1mWord Load (3.0ms)[0m   [0mSELECT `words`.* FROM `words` INNER JOIN `lists_words` ON `lists_words`.word_id = `words`.id INNER JOIN `lists` ON `lists`.id = `lists_words`.list_id WHERE (list_id = 81) LIMIT 1[0m
+  [4;36;1mWord Columns (2.1ms)[0m   [0;1mSHOW FIELDS FROM `words`[0m
+  [4;35;1mWord Load (0.3ms)[0m   [0mSELECT * FROM `words` WHERE (`words`.`id` = 2901) [0m
+Rendering template within layouts/layout
+Rendering test/list
+Completed in 25ms (View: 5, DB: 9) | 200 OK [http://localhost/test/list/81]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing TestController#list (for 127.0.0.1 at 2010-03-21 13:30:53) [POST]
+  Parameters: {"word_to_check"=>"2901", "authenticity_token"=>"kMN6CwxP8nSMm380UucLydRNJqcD1dTfMyt2ApbRZ0s=", "id"=>"81", "attempt"=>"marido"}
+  [4;35;1mList Load (0.3ms)[0m   [0mSELECT * FROM `lists` [0m
+  [4;36;1mList Columns (2.2ms)[0m   [0;1mSHOW FIELDS FROM `lists`[0m
+  [4;35;1mList Load (0.5ms)[0m   [0mSELECT * FROM `lists` WHERE (`lists`.`id` = 81) [0m
+  [4;36;1mWord Load (3.3ms)[0m   [0;1mSELECT `words`.* FROM `words` INNER JOIN `lists_words` ON `lists_words`.word_id = `words`.id INNER JOIN `lists` ON `lists`.id = `lists_words`.list_id WHERE (list_id = 81) LIMIT 1[0m
+  [4;35;1mWord Columns (2.1ms)[0m   [0mSHOW FIELDS FROM `words`[0m
+  [4;36;1mWord Load (0.6ms)[0m   [0;1mSELECT * FROM `words` WHERE (`words`.`id` = 2901) [0m
+Rendering template within layouts/layout
+Rendering test/list
+Completed in 27ms (View: 5, DB: 9) | 200 OK [http://localhost/test/list/81]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing TestController#list (for 127.0.0.1 at 2010-03-21 13:30:56) [POST]
+  Parameters: {"word_to_check"=>"2901", "authenticity_token"=>"kMN6CwxP8nSMm380UucLydRNJqcD1dTfMyt2ApbRZ0s=", "id"=>"81", "attempt"=>"marido"}
+  [4;36;1mList Load (0.3ms)[0m   [0;1mSELECT * FROM `lists` [0m
+  [4;35;1mList Columns (1.8ms)[0m   [0mSHOW FIELDS FROM `lists`[0m
+  [4;36;1mList Load (0.8ms)[0m   [0;1mSELECT * FROM `lists` WHERE (`lists`.`id` = 81) [0m
+  [4;35;1mWord Load (3.0ms)[0m   [0mSELECT `words`.* FROM `words` INNER JOIN `lists_words` ON `lists_words`.word_id = `words`.id INNER JOIN `lists` ON `lists`.id = `lists_words`.list_id WHERE (list_id = 81) LIMIT 1[0m
+  [4;36;1mWord Columns (1.8ms)[0m   [0;1mSHOW FIELDS FROM `words`[0m
+  [4;35;1mWord Load (0.6ms)[0m   [0mSELECT * FROM `words` WHERE (`words`.`id` = 2901) [0m
+Rendering template within layouts/layout
+Rendering test/list
+Completed in 25ms (View: 5, DB: 9) | 200 OK [http://localhost/test/list/81]

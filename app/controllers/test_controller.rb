@@ -19,7 +19,7 @@ class TestController < ApplicationController
       :first,
       :joins => :lists,
       :conditions => ["list_id = ?", @list.id],
-      :order => 'rand()',
+      # :order => 'rand()',
       :limit => 1
     )
 
