@@ -13,7 +13,7 @@ class TestController < ApplicationController
     
     @lists = List.find(:all)    
     
-    @list = List.find(params[:id])
+    @list = List.find_by_slug(params[:id])
     
     @new_word = Word.find(
       :all,

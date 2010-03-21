@@ -16,7 +16,7 @@ class ListsController < ApplicationController
   # GET /lists/1
   # GET /lists/1.xml
   def show
-    @list = List.find(params[:id])
+    @list = List.find_by_slug(params[:id])
 
     respond_to do |format|
       format.html # show.html.erb
@@ -37,7 +37,7 @@ class ListsController < ApplicationController
 
   # GET /lists/1/edit
   def edit
-    @list = List.find(params[:id])
+    @list = List.find_by_slug(params[:id])
   end
 
   # POST /lists
@@ -60,7 +60,7 @@ class ListsController < ApplicationController
   # PUT /lists/1
   # PUT /lists/1.xml
   def update
-    @list = List.find(params[:id])
+    @list = List.find_by_slug(params[:id])
 
     respond_to do |format|
       if @list.update_attributes(params[:list])
@@ -77,7 +77,7 @@ class ListsController < ApplicationController
   # DELETE /lists/1
   # DELETE /lists/1.xml
   def destroy
-    @list = List.find(params[:id])
+    @list = List.find_by_slug(params[:id])
     @list.destroy
 
     respond_to do |format|
