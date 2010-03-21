@@ -32,15 +32,15 @@ a:active { }
 
 
 body {
-  background: #ff8500 url(/images/bg.gif) top left repeat-y;
-  font-family: "Gotham Rounded", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  background: #ff8500 url(/images/bg.gif) -40px top repeat-y;
+/*  font-family: "Gotham Rounded", "Helvetica Neue", Helvetica, Arial, sans-serif;*/
 }
 
 
 /* Layout */
 
 .lists {
-  width: 200px;
+  width: 160px;
   margin-top: 100px;  
   float: left;
   padding: 20px;
@@ -50,6 +50,7 @@ body {
   padding-top: 115px;
   margin-left: 40px;
   width: 600px;
+  color: #fff;
 }
 .message {
   margin-top: 40px;
@@ -76,13 +77,13 @@ form {
 /*  text-align: center;*/
 }
 label {
-  color: #fff;
+/*  color: #fff;*/
   text-align: left;
   font-size: 34px;
   margin-left: 8px;
 }
 input[type="text"] {
-  font-family: "Gotham Rounded", "Helvetica Neue", Helvetica, Arial, sans-serif;
+/*  font-family: "Gotham Rounded", "Helvetica Neue", Helvetica, Arial, sans-serif;*/
   font-size: 34px;
   padding: 12px;
   -webkit-border-radius: 8px;
