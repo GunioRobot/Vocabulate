@@ -513,7 +513,7 @@ namespace :lists do
     #New list
     
     list = List.create(
-      :name => "Days of the Week"
+      :name => "Days, Months"
     )
     
     words_for_list = {
@@ -523,7 +523,25 @@ namespace :lists do
       "jueves" => "Thursday",
       "viernes" => "Friday",
       "sábado" => "Saturday",
-      "domingo" => "Sunday"
+      "domingo" => "Sunday",
+      "enero" => "January",
+      "febrero" => "February",
+      "marzo" => "March",
+      "abril" => "April",
+      "mayo" => "May",
+      "junio" => "June",
+      "julio" => "July",
+      "agosto" => "August",
+      "septiembre" => "September",
+      "octubre" => "October",
+      "noviembre" => "November",
+      "diciembre" => "December",
+      "la primavera" => "spring",
+      "el verano" => "summer",
+      "el otoño" => "autumn",
+      "el invierno" => "winter",
+      "semana" => "week",
+      "fin de semana" => "weekend"
     }
     
     words_for_list.each do |k,v|

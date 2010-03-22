@@ -29,6 +29,13 @@
     ) %>
   <% end %>
   
+  <div class="answer">
+    <strong><a href="#" onClick="$('answer').toggle();">Halp?</a></strong> 
+    <span id="answer" style="display: none">
+      <%= @new_word.word %>
+    </span>
+  </div>
+  
   <% unless @message.blank? %>
     <div class="message">
       <%= h @message %>
