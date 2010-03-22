@@ -1,0 +1,2 @@
+# Will exclude all .log files
+*.log
