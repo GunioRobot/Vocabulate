@@ -372,7 +372,7 @@ namespace :lists do
     #New list
     
     list = List.create(
-      :name => "Common verbs"
+      :name => "Infinitives"
     )
     
     words_for_list = {
@@ -390,7 +390,12 @@ namespace :lists do
       "montar" => "to ride", 
       "soler" => "to tend to",
       "levantarse" => "to get up",
-      "madrugar" => "to get up early"
+      "madrugar" => "to get up early",
+      "buscar" => "to look for",
+      "alquilar" => "to rent",
+      "comprar" => "to buy",
+      "encontrar" => "to find",
+      "firmar" => "to sign"
     }
     
     words_for_list.each do |k,v|
@@ -542,6 +547,83 @@ namespace :lists do
       "el invierno" => "winter",
       "semana" => "week",
       "fin de semana" => "weekend"
+    }
+    
+    words_for_list.each do |k,v|
+      word = Word.create(
+        :word => k,
+        :definition => v
+      )
+      word.lists << list
+    end
+    
+    
+    #New list
+    
+    list = List.create(
+      :name => "Directions"
+    )
+    
+    words_for_list = {
+      "dentro de" => "inside",
+      "encima de" => "on top of",
+      "sobre" => "above",
+      "delante de" => "in front of",
+      "detrás de" => "behind",
+      "debajo de" => "under",
+      "al lado de" => "next to / beside",
+      "entre" => "between",
+      "a la derecha de" => "to the right of",
+      "a la izquierda de" => "to the left of",
+      "enfrente de" => "opposite / facing",
+      "arriba" => "up",
+      "abajo" => "down",
+      "cerca" => "near",
+      "lejos" => "far",
+      "aquí" => "here",
+      "allí" => "there",
+      "fuera de" => "outside",
+      "al fondo de" => "at the end of"
+    }
+    
+    words_for_list.each do |k,v|
+      word = Word.create(
+        :word => k,
+        :definition => v
+      )
+      word.lists << list
+    end
+    
+    
+    #New list
+    
+    list = List.create(
+      :name => "Around the house"
+    )
+    
+    words_for_list = {
+      "los parlantes" => "(hifi) speakers",
+      "el árbol" => "tree",
+      "el banco" => "bench",
+      "el frigorífico" => "refrigerator",
+      "el lavabo" => "handbasin",
+      "la estantería" => "shelves",
+      "el armario" => "wardrobe",
+      "la cama" => "bed",
+      "la mesa" => "table",
+      "la mesilla" => "little table",
+      "la ducha" => "shower",
+      "el sillón" => "armchair",
+      "la bañera" => "bath",
+      "la lavadora" => "washing machine",
+      "la lámpara" => "light",
+      "el ventilador" => "fan",
+      "el techo" => "ceiling",
+      "el piso" => "apartment",
+      "el apartamento" => "small apartment",
+      "el estudio" => "studio apartment; study",
+      "el contrato" => "contract",
+      "la casa" => "house"
     }
     
     words_for_list.each do |k,v|
