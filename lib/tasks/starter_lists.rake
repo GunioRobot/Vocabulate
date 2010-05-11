@@ -8,6 +8,7 @@ namespace :lists do
       :name => "Common adjectives"
     )
     words_for_list = {
+      "amplio" => "spacious",
       "aburrido" => "boring",
       "agradable" => "agreeable",
       "alegre" => "happy",
@@ -400,23 +401,83 @@ namespace :lists do
       "ser" => "to be",
       "estar" => "to be (temporary, location)",
       "ir" => "to go",
+      "alquilar" => "to rent",
+      "entrar (en)" => "to enter (into)",
+      "necesitar" => "to need",
+      "amar" => "to love",
+      "enviar" => "to send",
+      "olvidar" => "to forget",
+      "andar" => "to walk",
+      "escuchar" => "to listen to",
+      "pagar" => "to pay for",
+      "ayudar" => "to help",
+      "esperar" => "to hope, to wait for",
+      "practicar" => "to practice",
+      "bailar" => "to dance",
       "estudiar" => "to study",
-      "hacer" => "to do",
-      "vivir" => "to live",
+      "preguntar" => "to ask",
+      "buscar" => "to look for",
+      "firmar" => "to sign",
+      "preparar" => "to prepare",
+      "caminar" => "to walk",
+      "ganar" => "to win, earn",
+      "regresar" => "to return",
+      "cantar" => "to sing",
+      "gastar" => "to spend money",
+      "saludar" => "to greet",
+      "cocinar" => "to cook",
+      "hablar" => "to speak, to talk",
+      "tocar" => "to touch, to play an instrument",
+      "comprar" => "to buy",
+      "lavar" => "to wash",
+      "tomar" => "to take, to drink",
+      "contestar" => "to answer",
+      "llegar" => "to arrive",
       "trabajar" => "to work",
-      "comer" => "to eat", 
-      "hablar" => "to speak",
-      "tener" => "to have",
-      "poner" => "to put",
-      "montar" => "to ride", 
+      "dejar" => "to allow, to leave",
+      "llevar" => "to wear, to carry",
+      "viajar" => "to travel",
+      "desear" => "to desire",
+      "mandar" => "to order",
+      "visitar" => "to visit",
+      "enseñar" => "to teach",
+      "mirar" => "to watch, to look at",
+      "aprender" => "to learn",
+      "creer" => "to believe",
+      "poseer" => "to possess, to own",
+      "beber" => "to drink",
+      "deber" => "to have to, to owe",
+      "prometer" => "to promise",
+      "comer" => "to eat",
+      "esconder" => "to hide",
+      "romper" => "to break",
+      "comprender" => "to understand",
+      "leer" => "to read",
+      "temer" => "to fear",
+      "correr" => "to run",
+      "meter en" => "to put into",
+      "vender" => "to sell",
+      "abrir" => "to open",
+      "descubrir" => "to discover",
+      "permitir" => "to permit",
+      "admitir" => "to admit",
+      "discutir" => "to discuss",
+      "recibir" => "to receive",
+      "asistir a" => "to attend",
+      "escribir" => "to write",
+      "subir" => "to climb, to go up",
+      "cubrir" => "to cover",
+      "existir" => "to exist",
+      "sufrir" => "to suffer",
+      "decidir" => "to decide",
+      "omitir" => "to omit",
+      "unir" => "to unite",
+      "describir" => "to describe",
+      "partir" => "to divide",
+      "vivir" => "to live",
       "soler" => "to tend to",
       "levantarse" => "to get up",
-      "madrugar" => "to get up early",
-      "buscar" => "to look for",
-      "alquilar" => "to rent",
-      "comprar" => "to buy",
-      "encontrar" => "to find",
-      "firmar" => "to sign"
+      "madrugar" => "to get up early"
     }
     
     words_for_list.each do |k,v|
@@ -449,7 +510,6 @@ namespace :lists do
       "esposa" => "wife",
       "novio" => "boyfriend",
       "novia" => "girlfriend",
-      "compañera" => "girlfriend (lesbian)",
       "abuelo" => "grandfather",
       "abuela" => "grandmother",
       "primo" => "male cousin",
@@ -495,7 +555,7 @@ namespace :lists do
       "diecinueve" => "nineteen",
       "veinti" => "twenty",
       "veintiuno" => "twenty-one",
-      "veintidos" => "twenty-two",
+      "veintidós" => "twenty-two",
       "veintitrés" => "twenty-three",
       "veinticuatro" => "twenty-four",
       "veinticinco" => "twenty-five",
@@ -645,7 +705,32 @@ namespace :lists do
       "el estudio" => "studio apartment; study",
       "el contrato" => "contract",
       "la casa" => "house",
-      "el pasillo" => "corridor"
+      "la alfombra" => "carpet (rug)",
+      "el ascensor" => "elevator",
+      "la casa" => "house",
+      "la cortina" => "curtain", 
+      "el cuadro" => "painting",
+      "el cuarto" => "room",
+      "el espejo" => "mirror", 
+      "los muebles" => "furniture", 
+      "los objetos" => "objects",
+      "la pared" => "wall",
+      "la puerta" => "door",
+      "la cocina" => "kitchen",
+      "el cuarto de baño" => "bathroom",
+      "el dormitorio" => "bedroom",
+      "las llaves" => "keys",
+      "el ordenador" => "computer",
+      "el pasillo" => "corridor",
+      "el plano" => "plan / map",
+      "el salón" => "lounge",
+      "el salón-comedor" => "lounge-dining room",
+      "la silla" => "chair",
+      "el sofá" => "couch",
+      "el suelo" => "floor",
+      "la ventana" => "window",
+      "los vecinos" => "neighbours",
+      "la calle" => "street"
     }
     
     words_for_list.each do |k,v|
@@ -698,6 +783,211 @@ namespace :lists do
       )
       word.lists << list
     end    
+    #New list
+    
+    list = List.create(
+      :name => "Present tense"
+    )
+    
+    words_for_list = {
+      "tengo" => "I have",
+      "tienes" => "you have",
+      "tiene" => "he has",
+      "tenemos" => "we have",
+      "tenéis" => "you (pl.) have",
+      "tienen" => "they have",
+      "voy" => "I go",
+      "vas" => "you go",
+      "va" => "he goes",
+      "vamos" => "we go",
+      "vais" => "you (pl.) go",
+      "van" => "they go",
+      "como" => "I eat",
+      "comes" => "you eat",
+      "come" => "he eats",
+      "comemos" => "we eat",
+      "coméis" => "you (pl.) eat",
+      "comen" => "they eat",
+      "tengo" => "I have",
+      "tienes" => "you have",
+      "tiene" => "he has",
+      "tenemos" => "we have",
+      "tenéis" => "you (pl.) have",
+      "tienen" => "they have",
+      "soy" => "I am",
+      "eres" => "you are",
+      "es" => "he is",
+      "somos" => "we are",
+      "sois" => "you (pl.) are",
+      "son" => "they are",
+      "estudio" => "I study",
+      "estudias" => "you study",
+      "estudia" => "he studies",
+      "estudiamos" => "we study",
+      "estudiás" => "you (pl.) study",
+      "estudian" => "they study",
+      "vivo" => "I live",
+      "vives" => "you live",
+      "vive" => "he lives",
+      "vivimos" => "we live",
+      "vivís" => "you (pl.) live",
+      "viven" => "they live",
+      "trabajo" => "I work",
+      "trabajas" => "you work",
+      "trabaja" => "he works",
+      "trabajamos" => "we work",
+      "trabajáis" => "you (pl.) work",
+      "trabajan" => "they work",
+      "hablo" => "I speak",
+      "hablas" => "you speak",
+      "habla" => "he speaks",
+      "hablamos" => "we speak",
+      "habláis" => "you (pl.) speak",
+      "hablan" => "they speak",
+      "pongo" => "I put",
+      "pones" => "you put",
+      "pone" => "he puts",
+      "ponemos" => "we put",
+      "ponéis" => "you (pl.) put",
+      "ponen" => "they put",
+      "estoy" => "I am (location)",
+      "estás" => "you are (location)",
+      "está" => "he is (location)",
+      "estamos" => "we are (location)",
+      "estáis" => "you (pl.) are (location)",
+      "estan" => "they are (location)",
+      "hago" => "I do",
+      "haces" => "you do",
+      "hace" => "he does",
+      "hacemos" => "we do",
+      "hacéis" => "you (pl.) do",
+      "hacen" => "they do",
+      "compro" => "I buy",
+      "compras" => "you buy",
+      "compra" => "he buys",
+      "compramos" => "we buy",
+      "compráis" => "you (pl.) buy",
+      "compran" => "they buy",
+      "cruzo" => "I cross",
+      "cruzas" => "you cross",
+      "cruza" => "he crosses",
+      "cruzamos" => "we cross",
+      "cruzáis" => "you (pl.) cross",
+      "cruzan" => "they cross",
+      "giro" => "I turn",
+      "giras" => "you turn",
+      "gira" => "he turns",
+      "giramos" => "we turn",
+      "giráis" => "you (pl.) turn",
+      "giran" => "they turn",
+      "sigo" => "I follow",
+      "sigues" => "you follow",
+      "sigue" => "he follows",
+      "seguimos" => "we follow",
+      "seguís" => "you (pl.) follow",
+      "siguen" => "they follow"
+    }
+    
+    words_for_list.each do |k,v|
+      word = Word.create(
+        :word => k,
+        :definition => v
+      )
+      word.lists << list
+    end
+    
+    #New list
+    
+    list = List.create(
+      :name => "Colours"
+    )
+    
+    words_for_list = {
+      "rojo" => "red",
+      "anaranjado" => "orange",
+      "amarillo" => "yellow",
+      "verde" => "green",
+      "azul" => "blue",
+      "morado" => "purple"      
+    }
+    
+    words_for_list.each do |k,v|
+      word = Word.create(
+        :word => k,
+        :definition => v
+      )
+      word.lists << list
+    end  
+    
+    #New list
+    
+    list = List.create(
+      :name => "Animals"
+    )
+    
+    words_for_list = {
+      "el elefante" => "elephant",
+      "el león" => "lion",
+      "el hipopótamo" => "hippopotamus",
+      "el rinoceronte" => "rhinoceros",
+      "el cuerno" => "antler",
+      "la trompa" => "trunk",
+      "el colmillo" => "tusk",
+      "el tigre" => "tiger",
+      "el alce" => "moose",
+      "el oso" => "bear",
+      "la llama" => "llama",
+      "la cebra" => "zebra",
+      "el bisonte" => "bison",
+      "el caballo" => "horse",
+      "el burro" => "donkey",
+      "la oveja" => "sheep",
+      "el venado" => "deer",
+      "el chivo" => "goat",
+      "la jirafa" => "giraffe",
+      "el cerdo" => "hog",
+      "la vaca" => "cow",
+      "el perro" => "dog",
+      "el gato" => "cat",
+      "el mono" => "monkey",
+      "el zorro" => "fox"
+    }
+    
+    words_for_list.each do |k,v|
+      word = Word.create(
+        :word => k,
+        :definition => v
+      )
+      word.lists << list
+    end
+
+    #New list
+    
+    list = List.create(
+      :name => "Positive and negative"
+    )
+    
+    words_for_list = {
+      "algo" => "something",
+      "nada" => "nothing",
+      "alguien" => "somebody",
+      "nadie" => "nobody",
+      "algúno" => "some, something",
+      "ningúno"  => "no, none",
+      "siempre" => "always",
+      "nunca" => "never", 
+      "jamás" => "never, ever",
+      "también" => "also",
+      "tampoco" => "neither"
+    }
+    
+    words_for_list.each do |k,v|
+      word = Word.create(
+        :word => k,
+        :definition => v
+      )
+      word.lists << list
+    end
 
   end
 end
