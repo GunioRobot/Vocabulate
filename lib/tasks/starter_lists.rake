@@ -988,6 +988,46 @@ namespace :lists do
       )
       word.lists << list
     end
+    
+    
+    #New list
+    
+    list = List.create(
+      :name => "Time"
+    )
+    
+    words_for_list = {
+      "de la tarde" => "in the afternoon",
+      "de la mañana" => "in the morning",
+      "de la noches" => "in the evening",
+      "de la madrugado" => "in the early morning",
+      "a la medianoche" => "at midnight",
+      "al mediadía" => "at noon",
+      "el año pasado" => "last year",
+      "durante el día" => "during the day",
+      "es la una" => "it's one o'clock",
+      "son las ocho" => "it's eight o'clock",
+      "son las tres y cinco" => "it's five past three",
+      "es la una y media" => "it's half past one",
+      "son las tres menos doce" => "it's twelve minutes to three",
+      "son las cuatro y cuarto" => "it's quarter past four",
+      "anoche" => "last night",
+      "la semana que viene" => "next week",
+      "el lunes que viene" => "next Monday",
+      "en punto" => "on the dot",
+      "temprano" => "early",
+      "tarde" => "late",
+      "ayer" => "yesterday",
+      "don las diez de la noche" => "it's ten in the evening"
+    }
+    
+    words_for_list.each do |k,v|
+      word = Word.create(
+        :word => k,
+        :definition => v
+      )
+      word.lists << list
+    end
 
   end
 end
