@@ -17,7 +17,7 @@ table, caption, tbody, tfoot, thead, tr, th, td {
 }
 
 /* For IE */
-img { -ms-interpolation-mode:bicubic; } 
+img { -ms-interpolation-mode:bicubic; }
 
 a img {
   border: none;
@@ -41,7 +41,7 @@ body {
 
 .lists {
   width: 160px;
-  margin-top: 100px;  
+  margin-top: 100px;
   float: left;
   padding: 20px;
   font-size: 14px;

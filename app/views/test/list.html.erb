@@ -2,7 +2,7 @@
   <ul>
     <% @lists.each do |list| %>
       <li><%= link_to(
-        list.name, 
+        list.name,
         url_for(:action => "list", :id => list.slug),
         :class => list == @list ? "active" : nil
       ) %></li>
@@ -16,31 +16,31 @@
 
   <% form_tag "/test/list/#{@list.slug}" do %>
     <%= label_tag @new_word.definition %><br />
-    <%= hidden_field_tag 'word_to_check', @new_word.id  %>  
+    <%= hidden_field_tag 'word_to_check', @new_word.id  %>
     <%= text_field_tag(
-      'attempt', 
-      nil, 
+      'attempt',
+      nil,
       {
-        :autocomplete => 'off', 
-        :autofocus => 'true', 
+        :autocomplete => 'off',
+        :autofocus => 'true',
         :placeholder => 'Answer',
         :size => 18
       }
     ) %>
   <% end %>
-  
+
   <div class="answer">
-    <strong><a href="#" onClick="$('answer').toggle();">Halp?</a></strong> 
+    <strong><a href="#" onClick="$('answer').toggle();">Halp?</a></strong>
     <span id="answer" style="display: none">
       <%= @new_word.word %>
     </span>
   </div>
-  
+
   <% unless @message.blank? %>
     <div class="message">
       <%= h @message %>
     </div>
   <% end %>
-  
-  
+
+
 </div>

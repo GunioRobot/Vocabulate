@@ -1,9 +1,9 @@
 namespace :lists do
   desc "Add a couple of starter lists"
   task :create_lists => :environment do
-    
+
     [Word, List].each(&:delete_all)
-    
+
     list = List.create(
       :name => "Common adjectives"
     )
@@ -60,7 +60,7 @@ namespace :lists do
       "incómodo" => "uncomfortable",
       "inconveniente" => "inconvenient",
       "incorrecto" => "incorrect",
-      "infantil" => "childish",                                                             
+      "infantil" => "childish",
       "joven" => "young",
       "inteligente" => "intelligent",
       "largo" => "long",
@@ -78,7 +78,7 @@ namespace :lists do
       "ocupado" => "busy",
       "pasado" => "passed",
       "peligroso" => "dangerous",
-      "pelirrojo" => "red-haired",                  
+      "pelirrojo" => "red-haired",
       "pequeño" => "small",
       "perezoso" => "lazy",
       "perfecto" => "perfect",
@@ -98,7 +98,7 @@ namespace :lists do
       "viejo" => "old",
       "vivo" => "alive"
     }
-    
+
     words_for_list.each do |k,v|
       word = Word.create(
         :word => k,
@@ -106,13 +106,13 @@ namespace :lists do
       )
       word.lists << list
     end
-    
+
     #New list
-    
+
     list = List.create(
       :name => "More adjectives"
     )
-    
+
     words_for_list = {
       "abierto" => "open",
       "abundante" => "abundant",
@@ -381,7 +381,7 @@ namespace :lists do
       "valiente" => "valiant",
       "varios" => "variety, various"
     }
-    
+
     words_for_list.each do |k,v|
       word = Word.create(
         :word => k,
@@ -389,14 +389,14 @@ namespace :lists do
       )
       word.lists << list
     end
-    
-    
+
+
     #New list
-    
+
     list = List.create(
       :name => "Infinitives"
     )
-    
+
     words_for_list = {
       "ser" => "to be",
       "estar" => "to be (temporary, location)",
@@ -479,7 +479,7 @@ namespace :lists do
       "levantarse" => "to get up",
       "madrugar" => "to get up early"
     }
-    
+
     words_for_list.each do |k,v|
       word = Word.create(
         :word => k,
@@ -487,17 +487,17 @@ namespace :lists do
       )
       word.lists << list
     end
-    
+
     #New list
-    
+
     list = List.create(
       :name => "Family"
     )
-    
+
     words_for_list = {
       "padre" => "father",
       "madre" => "mother",
-      "padres" => "parents",      
+      "padres" => "parents",
       "hermano" => "brother",
       "hermana" => "sister",
       "tía" => "aunt",
@@ -517,7 +517,7 @@ namespace :lists do
       "nombre" => "name",
       "apellido" => "surname"
     }
-    
+
     words_for_list.each do |k,v|
       word = Word.create(
         :word => k,
@@ -525,13 +525,13 @@ namespace :lists do
       )
       word.lists << list
     end
-    
+
     #New list
-    
+
     list = List.create(
       :name => "Numbers"
     )
-    
+
     words_for_list = {
       "cero" => "zero",
       "uno" => "one",
@@ -587,7 +587,7 @@ namespace :lists do
       "novecientos" => "nine hundred",
       "mil" => "one thousand"
     }
-    
+
     words_for_list.each do |k,v|
       word = Word.create(
         :word => k,
@@ -595,13 +595,13 @@ namespace :lists do
       )
       word.lists << list
     end
-    
+
     #New list
-    
+
     list = List.create(
       :name => "Days, Months"
     )
-    
+
     words_for_list = {
       "lunes" => "Monday",
       "martes" => "Tuesday",
@@ -629,7 +629,7 @@ namespace :lists do
       "semana" => "week",
       "fin de semana" => "weekend"
     }
-    
+
     words_for_list.each do |k,v|
       word = Word.create(
         :word => k,
@@ -637,14 +637,14 @@ namespace :lists do
       )
       word.lists << list
     end
-    
-    
+
+
     #New list
-    
+
     list = List.create(
       :name => "Directions"
     )
-    
+
     words_for_list = {
       "dentro de" => "inside",
       "encima de" => "on top of",
@@ -666,7 +666,7 @@ namespace :lists do
       "fuera de" => "outside",
       "al fondo de" => "at the end of"
     }
-    
+
     words_for_list.each do |k,v|
       word = Word.create(
         :word => k,
@@ -674,14 +674,14 @@ namespace :lists do
       )
       word.lists << list
     end
-    
-    
+
+
     #New list
-    
+
     list = List.create(
       :name => "Around the house"
     )
-    
+
     words_for_list = {
       "los parlantes" => "(hifi) speakers",
       "el árbol" => "tree",
@@ -708,11 +708,11 @@ namespace :lists do
       "la alfombra" => "carpet (rug)",
       "el ascensor" => "elevator",
       "la casa" => "house",
-      "la cortina" => "curtain", 
+      "la cortina" => "curtain",
       "el cuadro" => "painting",
       "el cuarto" => "room",
-      "el espejo" => "mirror", 
-      "los muebles" => "furniture", 
+      "el espejo" => "mirror",
+      "los muebles" => "furniture",
       "los objetos" => "objects",
       "la pared" => "wall",
       "la puerta" => "door",
@@ -732,7 +732,7 @@ namespace :lists do
       "los vecinos" => "neighbours",
       "la calle" => "street"
     }
-    
+
     words_for_list.each do |k,v|
       word = Word.create(
         :word => k,
@@ -740,13 +740,13 @@ namespace :lists do
       )
       word.lists << list
     end
-    
+
     #New list
-    
+
     list = List.create(
       :name => "Professions"
     )
-    
+
     words_for_list = {
       "médico" => "doctor",
       "enfermero" => "nurse",
@@ -775,20 +775,20 @@ namespace :lists do
       "piloto" => "pilot",
       "policía" => "police"
     }
-    
+
     words_for_list.each do |k,v|
       word = Word.create(
         :word => k,
         :definition => v
       )
       word.lists << list
-    end    
+    end
     #New list
-    
+
     list = List.create(
       :name => "Present tense"
     )
-    
+
     words_for_list = {
       "tengo" => "I have",
       "tienes" => "you have",
@@ -887,7 +887,7 @@ namespace :lists do
       "seguís" => "you (pl.) follow",
       "siguen" => "they follow"
     }
-    
+
     words_for_list.each do |k,v|
       word = Word.create(
         :word => k,
@@ -895,36 +895,36 @@ namespace :lists do
       )
       word.lists << list
     end
-    
+
     #New list
-    
+
     list = List.create(
       :name => "Colours"
     )
-    
+
     words_for_list = {
       "rojo" => "red",
       "anaranjado" => "orange",
       "amarillo" => "yellow",
       "verde" => "green",
       "azul" => "blue",
-      "morado" => "purple"      
+      "morado" => "purple"
     }
-    
+
     words_for_list.each do |k,v|
       word = Word.create(
         :word => k,
         :definition => v
       )
       word.lists << list
-    end  
-    
+    end
+
     #New list
-    
+
     list = List.create(
       :name => "Animals"
     )
-    
+
     words_for_list = {
       "el elefante" => "elephant",
       "el león" => "lion",
@@ -952,7 +952,7 @@ namespace :lists do
       "el mono" => "monkey",
       "el zorro" => "fox"
     }
-    
+
     words_for_list.each do |k,v|
       word = Word.create(
         :word => k,
@@ -962,11 +962,11 @@ namespace :lists do
     end
 
     #New list
-    
+
     list = List.create(
       :name => "Positive and negative"
     )
-    
+
     words_for_list = {
       "algo" => "something",
       "nada" => "nothing",
@@ -975,12 +975,12 @@ namespace :lists do
       "algúno" => "some, something",
       "ningúno"  => "no, none",
       "siempre" => "always",
-      "nunca" => "never", 
+      "nunca" => "never",
       "jamás" => "never, ever",
       "también" => "also",
       "tampoco" => "neither"
     }
-    
+
     words_for_list.each do |k,v|
       word = Word.create(
         :word => k,
@@ -988,14 +988,14 @@ namespace :lists do
       )
       word.lists << list
     end
-    
-    
+
+
     #New list
-    
+
     list = List.create(
       :name => "Time"
     )
-    
+
     words_for_list = {
       "de la tarde" => "in the afternoon",
       "de la mañana" => "in the morning",
@@ -1020,7 +1020,7 @@ namespace :lists do
       "ayer" => "yesterday",
       "don las diez de la noche" => "it's ten in the evening"
     }
-    
+
     words_for_list.each do |k,v|
       word = Word.create(
         :word => k,

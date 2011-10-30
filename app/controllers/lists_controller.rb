@@ -1,7 +1,7 @@
 class ListsController < ApplicationController
-  before_filter :login_required  
+  before_filter :login_required
   layout 'admin'
-    
+
   # GET /lists
   # GET /lists.xml
   def index

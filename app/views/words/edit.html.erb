@@ -11,21 +11,21 @@
     <%= f.label :definition %><br />
     <%= f.text_field :definition %>
   </p>
-  
+
   <p>
     <label for="word[list_ids][]">Lists</label><br />
     <%= select_tag(
       'word[list_ids][]',
       options_from_collection_for_select(
         List.find(:all, :order => 'name'),
-        'id', 
-        'name', 
+        'id',
+        'name',
         @word.lists.collect {|l| l.id}
       ),
       :multiple => true
     ) %>
   </p>
-  
+
   <p>
     <%= f.submit "Update" %>
   </p>

@@ -1,5 +1,5 @@
 class WordsController < ApplicationController
-  before_filter :login_required  
+  before_filter :login_required
   # GET /words
   # GET /words.xml
   def index
@@ -71,7 +71,7 @@ class WordsController < ApplicationController
       end
     end
   end
-  
+
 
   # DELETE /words/1
   # DELETE /words/1.xml

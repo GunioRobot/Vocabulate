@@ -1,20 +1,20 @@
 class TestController < ApplicationController
-  
+
   layout 'layout'
-  
+
   def index
-    
+
     @lists = List.find(:all)
-  
+
   end
-  
-  
+
+
   def list
-    
-    @lists = List.find(:all)    
-    
+
+    @lists = List.find(:all)
+
     @list = List.find_by_slug(params[:id])
-    
+
     @new_word = Word.find(
       :all,
       :joins => :lists,
@@ -33,5 +33,5 @@ class TestController < ApplicationController
       end
     end
   end
-  
+
 end

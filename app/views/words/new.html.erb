@@ -17,8 +17,8 @@
       'word[list_ids][]',
       options_from_collection_for_select(
         List.find(:all, :order => 'name'),
-        'id', 
-        'name', 
+        'id',
+        'name',
         @word.lists.collect {|l| l.id}
       ),
       :multiple => true
